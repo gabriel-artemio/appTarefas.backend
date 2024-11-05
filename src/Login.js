@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === 'admin' && password === '123') {
+    try {
+      const response = await axios.post('https://sua-api.com/api/auth/login', { username, password });
+      const { token } = response.data;
+
+      // Armazena o token no localStorage (ou sessionStorage)
+      localStorage.setItem('token', token);
+
+      // Redireciona para a página protegida
       navigate('/pages/home');
-    } else {
+    } catch (error) {
       alert('Credenciais incorretas');
     }
   };
