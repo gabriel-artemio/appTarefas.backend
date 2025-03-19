@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "f75be3f0-69a6-4590-9b64-fa3fe014a30b",
+		"name": "TesteCursoTarefa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26735814"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo Teste\",\r\n    \"description\": \"Descrição Teste\",\r\n    \"when\": \"2025-03-18T23:00:00.000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo Teste\",\r\n    \"description\": \"Descrição Teste\",\r\n    \"when\": \"2025-03-18T23:00:00.000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
