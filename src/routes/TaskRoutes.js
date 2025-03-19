@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 const TaskController = require('../controller/TaskController');
+const TaskValidation = require('../middlewares/TaskValidation');
 
-router.post('/', TaskController.create);
+//quando chegar requisição no verbo post, primeiro vai ser executado o middleware e depois a função create
+router.post('/', TaskValidation, TaskController.create);
 
 module.exports = router;
