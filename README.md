@@ -18,7 +18,7 @@
   GET /task/filter/all
 ```
 ```http
-  GET //task/filter/byid/{id}
+  GET /task/filter/byid/{id}
 ```
 ```http
   POST /task
