@@ -18,10 +18,19 @@
   GET /task/filter/all
 ```
 ```http
+  GET /task/filter/byid/{id}
+```
+```http
   GET /task/filter/late
 ```
 ```http
-  GET /task/filter/byid/{id}
+  GET /task/filter/today
+```
+```http
+  GET /task/filter/week
+```
+```http
+  GET /task/filter/month
 ```
 ```http
   POST /task
