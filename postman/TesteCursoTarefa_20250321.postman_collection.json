@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\"\r\n}",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -43,6 +43,28 @@
 					"response": []
 				},
 				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task/filter/byid/67dce08415ae8f6d54f7013b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"byid",
+								"67dce08415ae8f6d54f7013b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GetAtrasadas",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -52,7 +74,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\"\r\n}",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,12 +98,24 @@
 					"response": []
 				},
 				{
-					"name": "GetById",
+					"name": "GetDia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/byid/",
+							"raw": "http://localhost:3000/task/filter/today",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -90,8 +124,73 @@
 							"path": [
 								"task",
 								"filter",
-								"byid",
-								""
+								"today"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSemana",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/filter/week",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"week"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/filter/month",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"month"
 							]
 						}
 					},
@@ -104,7 +203,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo Teste\",\r\n    \"description\": \"Descrição Teste\",\r\n    \"when\": \"2025-03-18T23:00:00.000\"\r\n}",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo Teste\",\r\n    \"description\": \"Descrição Teste\",\r\n    \"when\": \"2025-03-21:10:00.000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -133,7 +232,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo Teste\",\r\n    \"description\": \"Descrição Teste\",\r\n    \"when\": \"2025-03-18T23:00:00.000\"\r\n}",
+							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\",\r\n    \"type\": 1,\r\n    \"title\": \"Titulo da Tarefa\",\r\n    \"description\": \"Descrição da Tarefa\",\r\n    \"when\": \"2025-03-21:10:00.000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,14 +240,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/task",
+							"raw": "http://localhost:3000/task/67dce08415ae8f6d54f7013b",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"task"
+								"task",
+								"67dce08415ae8f6d54f7013b"
 							]
 						}
 					},
@@ -160,7 +260,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/task/{id}/true",
+							"raw": "http://localhost:3000/task/67dce08415ae8f6d54f7013b/true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -168,7 +268,7 @@
 							"port": "3000",
 							"path": [
 								"task",
-								"{id}",
+								"67dce08415ae8f6d54f7013b",
 								"true"
 							]
 						}
