@@ -5,7 +5,7 @@ const TaskController = require('../controller/TaskController');
 const TaskValidation = require('../middlewares/TaskValidation');
 const MacaddressValidation = require('../middlewares/MacaddressValidation');
 
-router.get('/filter/byId/:id', TaskController.show);
+router.get('/filter/byid/:id', TaskController.byId);
 router.get('/filter/all', MacaddressValidation, TaskController.all);
 router.get('/filter/late', MacaddressValidation, TaskController.late);
 //quando chegar requisição no verbo post, primeiro vai ser executado o middleware e depois a função create
