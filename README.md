@@ -15,7 +15,7 @@
 ##### Task
 
 ```http
-  GET /api/task
+  GET /api/task/filter/all
 ```
 ```http
   GET /api/task/{id}
