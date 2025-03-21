@@ -11,23 +11,11 @@
 			"item": [
 				{
 					"name": "GetAllByMac",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/all",
+							"raw": "http://localhost:3000/task/filter/all/00:11:22:33:44:55",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -36,7 +24,8 @@
 							"path": [
 								"task",
 								"filter",
-								"all"
+								"all",
+								"00:11:22:33:44:55"
 							]
 						}
 					},
@@ -66,23 +55,11 @@
 				},
 				{
 					"name": "GetAtrasadas",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/late",
+							"raw": "http://localhost:3000/task/filter/late/00:11:22:33:44:55",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -91,7 +68,8 @@
 							"path": [
 								"task",
 								"filter",
-								"late"
+								"late",
+								"00:11:22:33:44:55"
 							]
 						}
 					},
@@ -99,23 +77,11 @@
 				},
 				{
 					"name": "GetDia",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/today",
+							"raw": "http://localhost:3000/task/filter/today/00:11:22:33:44:55",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -124,7 +90,8 @@
 							"path": [
 								"task",
 								"filter",
-								"today"
+								"today",
+								"00:11:22:33:44:55"
 							]
 						}
 					},
@@ -132,23 +99,11 @@
 				},
 				{
 					"name": "GetSemana",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/week",
+							"raw": "http://localhost:3000/task/filter/week/00:11:22:33:44:55",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -157,7 +112,8 @@
 							"path": [
 								"task",
 								"filter",
-								"week"
+								"week",
+								"00:11:22:33:44:55"
 							]
 						}
 					},
@@ -165,23 +121,11 @@
 				},
 				{
 					"name": "GetMes",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"macaddress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:3000/task/filter/month",
+							"raw": "http://localhost:3000/task/filter/month/00:11:22:33:44:55",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -190,7 +134,30 @@
 							"path": [
 								"task",
 								"filter",
-								"month"
+								"month",
+								"00:11:22:33:44:55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task/filter/year/00:11:22:33:44:55",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"year",
+								"00:11:22:33:44:55"
 							]
 						}
 					},
