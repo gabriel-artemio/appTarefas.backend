@@ -10,6 +10,61 @@
 			"name": "Task",
 			"item": [
 				{
+					"name": "GetAllByMac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/filter/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task/filter/byid/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"filter",
+								"byid",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Insert",
 					"request": {
 						"method": "POST",
@@ -61,39 +116,6 @@
 							"port": "3000",
 							"path": [
 								"task"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetByMac",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"maccadress\": \"00:11:22:33:44:55\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/task/filter/all",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"task",
-								"filter",
-								"all"
 							]
 						}
 					},

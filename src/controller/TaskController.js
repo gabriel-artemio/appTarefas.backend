@@ -13,6 +13,19 @@ class TaskController{
         });
     }
 
+    async byId(req, res){
+        await TaskModel.findById(req.params.id)
+        .then(response =>{
+            if(response)
+                return res.status(200).json(response);
+            else
+                return res.status(404).json({error : 'tarefa não encontrada'});
+        })
+        .catch(error => {
+            return res.status(400).json(error);
+        });
+    };
+
     async create(req,res){
         const task = new TaskModel(req.body);
         await task
@@ -36,7 +49,7 @@ class TaskController{
         .catch(error => {
             return res.status(500).json(error);
         })
-    }
+    };
 };
 
 module.exports = new TaskController();
