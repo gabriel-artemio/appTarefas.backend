@@ -27,7 +27,7 @@
   PUT /task/{id}
 ```
 ```http
-  PUT /task/{id}/true
+  PUT : (UpdateDone) /task/{id}/true
 ```
 ```http
   DELETE /task/{id}
