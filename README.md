@@ -15,17 +15,17 @@
 ##### Task
 
 ```http
-  GET /api/task/filter/all
+  GET /task/filter/all
 ```
 ```http
-  GET /api/task/{id}
+  GET //task/filter/byid/{id}
 ```
 ```http
-  POST /api/task
+  POST /task
 ```
 ```http
-  PUT /api/task/{id}
+  PUT /task/{id}
 ```
 ```http
-  DELETE /api/task/{id}
+  DELETE /task/{id}
 ```
