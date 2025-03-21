@@ -2,6 +2,17 @@ const TaskModel = require('../model/TaskModel');
 
 class TaskController{
 
+    async all(req, res){
+        await TaskModel.find({macaddress : {'$in':req.body.macaddress}})
+        .sort('when')
+        .then(response => {
+            return res.status(200).json(response);
+        })
+        .catch(error => {
+            return res.status(400).json(error);
+        });
+    }
+
     async create(req,res){
         const task = new TaskModel(req.body);
         await task
