@@ -18,6 +18,9 @@
   GET /task/filter/all
 ```
 ```http
+  GET /task/filter/late
+```
+```http
   GET /task/filter/byid/{id}
 ```
 ```http
@@ -27,7 +30,7 @@
   PUT /task/{id}
 ```
 ```http
-  PUT : (UpdateDone) /task/{id}/true
+  PUT /task/{id}/true
 ```
 ```http
   DELETE /task/{id}
